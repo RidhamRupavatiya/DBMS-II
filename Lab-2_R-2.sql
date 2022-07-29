@@ -21,21 +21,22 @@ insert into Employee values(9,'Michael','Male',null,6500,'London');
 insert into Employee values(10,'John','Male','01-jan-15',8800,'London');
 
 
---1.) Display all the employees whose name starts with “m” and 4 th character is “h”.
+--1.) Display all the employees whose name starts with â€œmâ€ and 4 th character is â€œhâ€.
 select * from Employee where ENAME like 'M__h%';
 
 --2.) Find the value of 3 raised to 5. Label the column as output.
 Select power(3,5);
 
---3.)  Write a query to subtract 20 days from the current date.select getdate()-20;
+--3.)  Write a query to subtract 20 days from the current date. 
+select getdate()-20;
 
---4.) Write a query to display name of employees whose name starts with “j” and contains “n” in their name.
+--4.) Write a query to display name of employees whose name starts with â€œjâ€ and contains â€œnâ€ in their name.
 select EName from Employee where ENAME like 'j%' and Ename like '%n%';
 
---5.) Display 2nd to 9th character of the given string “SQL Programming”.
+--5.) Display 2nd to 9th character of the given string â€œSQL Programmingâ€.
 select substring('SQL Programming',2,8);
 
---6.) Display name of the employees whose city name ends with “ney” &contains six characters.
+--6.) Display name of the employees whose city name ends with â€œneyâ€ &contains six characters.
 select Ename from Employee where city like'___ney';
 
 --7.) Write a query to convert value 15 to string.
@@ -48,7 +49,7 @@ alter table Employee add Department varchar(20);
 update Employee set Department='marketing' where city='London';
 select* from Employee;
 
---10.) Display all the employees whose name ends with either “n” or “y”.
+--10.) Display all the employees whose name ends with either â€œnâ€ or â€œyâ€.
 select*from Employee where Ename like '%n' or ENAME like'%y';
 
 --11.) Find smallest integer value that is greater than or equal to 63.1, 63.8 and -63.2.
@@ -81,7 +82,7 @@ select city from Employee where  joiningDate>'2014-02-01'
 group by city
 having sum(salary)>1500;
 
---20.) Write a query to replace “u” with “oo” in Ename.
+--20.) Write a query to replace â€œuâ€ with â€œooâ€ in Ename.
 select replace(Ename,'u','oo') from Employee;
 
 --21.) Display city with average salaries and total number of employees belongs to each city.
